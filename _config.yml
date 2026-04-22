@@ -1,18 +1,14 @@
 title:       "hands4flow"
 description: "Massage, Coaching & Reiki in Emmen"
-
-url:     "https://www.hands4flow.site"
-baseurl: ""
-
+url:         "https://hands4flownl.github.io"
+baseurl:     "/hands4flownl-verbeterd"
 author:
   name: "Elsemarie van der Ploeg"
-
 permalink: /:path/
 markdown:  kramdown
-
 exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
   - README.md
-  - main/        # oude map uitsluiten zodat Jekyll die negeert
+  - main/
