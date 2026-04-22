@@ -75,6 +75,14 @@
     <li><a href="{{ '/coaching/' | absolute_url }}"
       {% if page.url contains 'coaching' %}class="active"{% endif %}>Coaching</a></li>
 
+    <li class="has-sub">
+      <a href="{{ '/reiki4flow-cursussen/' | absolute_url }}"
+        {% if page.url contains 'reiki4flow' %}class="active"{% endif %}>Reiki4flow</a>
+      <ul class="sub-menu">
+        <li><a href="{{ '/reiki4flow-cursussen/agenda/' | absolute_url }}">Agenda &amp; data</a></li>
+      </ul>
+    </li>
+
     <li><a href="{{ '/tarieven/' | absolute_url }}"
       {% if page.url contains 'tarieven' %}class="active"{% endif %}>Tarieven</a></li>
     <li><a href="{{ '/over-mij/' | absolute_url }}"
@@ -125,6 +133,7 @@
       Lid van <a href="https://www.reikicirkel.nl" target="_blank" rel="noopener">Reiki Vereniging Cirkel</a>
       &nbsp;·&nbsp; KVK: 97209341
       &nbsp;·&nbsp; <a href="{{ '/privacyverklaring/' | absolute_url }}" style="color:rgba(255,255,255,.6);">Privacyverklaring</a>
+      &nbsp;·&nbsp; <a href="{{ '/algemene-voorwaarden/' | absolute_url }}" style="color:rgba(255,255,255,.6);">Algemene voorwaarden</a>
     </p>
     <div style="margin-top:1.2rem;display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;justify-content:center;">
       <span style="font-size:.8rem;color:rgba(255,255,255,.5);margin-right:.3rem;">Deel deze pagina:</span>

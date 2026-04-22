@@ -5,16 +5,21 @@ description: "Massage, Coaching & Reiki in Emmen – hands4flow"
 permalink: /
 ---
 
+<!-- ── KORTINGSBAND ── -->
+<div style="background:var(--oker);color:var(--bruin);text-align:center;padding:.6rem 1rem;font-size:.88rem;font-weight:600;">
+  🎉 26% korting op Happy Soul Sessies (coaching) t/m 26 april — <a href="{{ '/tarieven/' | absolute_url }}" style="color:var(--bruin);text-decoration:underline;">bekijk tarieven</a>
+</div>
+
 <!-- ── HERO ── -->
 <section class="hero">
   <div class="hero-text">
-    <span class="hero-eyebrow fade-up">Massage · Coaching · Reiki — Emmen</span>
+    <span class="hero-eyebrow fade-up">Massage bij hands4flow in Emmen voor stress en vermoeidheid</span>
     <h1 class="fade-up delay-1">
-      Voel je weer <em>licht</em><br>en ontspannen.
+      Gun jezelf <em>rust</em><br>en herstel.
     </h1>
     <p class="hero-desc fade-up delay-2">
-      Last van stress, vermoeidheid, nek- en schouderklachten of slaapproblemen? Of gewoon behoefte aan een moment voor jezelf?
-      Bij hands4flow in Emmen help ik je om spanning los te laten en je energie te herstellen.
+      Heb jij last van rug-, nek- of schouderklachten? Is je hoofd vol en je energie uit balans?
+      Bij Hands4flow in Emmen help ik je om weer te ontspannen — op lichamelijk én geestelijk gebied.
     </p>
     <div class="fade-up delay-3">
       <a href="{{ '/contact/' | absolute_url }}" class="btn-primary">Afspraak maken</a>
@@ -25,7 +30,7 @@ permalink: /
     {% if site.data.homepage.hero.afbeelding %}
     <img src="{{ site.data.homepage.hero.afbeelding }}" alt="Voetreflexmassage bij hands4flow" />
     {% else %}
-    <img src="https://primary.jwwb.nl/pexels/52/5240642.jpeg?enable-io=true&enable=upscale&crop=1.4286%3A1&width=900" alt="Voetreflexmassage bij hands4flow" />
+    <img src="https://primary.jwwb.nl/pexels/30/301599.jpeg?enable-io=true&enable=upscale&crop=1.2139%3A1&width=900" alt="Voetreflexmassage bij hands4flow" />
     {% endif %}
     <div class="hero-badge">
       <div class="hero-badge-icon">🌿</div>
@@ -42,7 +47,7 @@ permalink: /
   <div class="about">
     <div class="about-img-wrap">
       <img class="about-img"
-           src="{% if site.data['over-mij'].inhoud.foto %}{{ site.data['over-mij'].inhoud.foto }}{% else %}https://primary.jwwb.nl/public/z/f/p/temp-umaagwfutijsnqmyiokx/1000019670-high.jpg?enable-io=true&enable=upscale&width=700{% endif %}"
+           src="{% if site.data['over-mij'].inhoud.foto %}{{ site.data['over-mij'].inhoud.foto }}{% else %}https://primary.jwwb.nl/public/z/f/p/temp-umaagwfutijsnqmyiokx/img20260226130755-high.jpg?enable-io=true&enable=upscale&crop=0.5263%3A1%2Coffset-x15&width=700{% endif %}"
            alt="Elsemarie van der Ploeg – hands4flow Emmen" />
       <span class="about-tag">Reiki Master ✦ Coach</span>
     </div>
@@ -230,6 +235,35 @@ permalink: /
   </div>
 </section>
 {% endif %}
+
+<!-- ── PARTNERS / INITIATIEVEN ── -->
+<section style="background:var(--creme);text-align:center;">
+  <div style="max-width:900px;margin:0 auto;">
+    <span class="section-label">Meer van Elsemarie</span>
+    <h2 class="section-title" style="font-size:1.6rem;">Andere initiatieven</h2>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:2rem;align-items:start;">
+      <div>
+        <a href="https://www.nederland-bewust.nl" target="_blank" rel="noopener">
+          <img src="https://primary.jwwb.nl/public/z/f/p/temp-umaagwfutijsnqmyiokx/nederland-bewust-logo-transparant-high.png?enable-io=true&enable=upscale&width=300"
+               alt="Nederland Bewust" style="max-height:80px;object-fit:contain;margin-bottom:1rem;" />
+        </a>
+        <p style="font-size:.9rem;color:var(--bruin-lt);line-height:1.7;">
+          Elsemarie is mede-initiatiefneemster van <a href="https://www.nederland-bewust.nl" target="_blank" rel="noopener" style="color:var(--oker);">nederland-bewust.nl</a> — de startpagina voor alternatieve zorg, holistische therapie en natuurlijke gezondheid.
+        </p>
+      </div>
+      <div>
+        <a href="https://www.jouwcoachlijn.com" target="_blank" rel="noopener">
+          <img src="https://primary.jwwb.nl/public/z/f/p/temp-umaagwfutijsnqmyiokx/logo_jcl_edited_v2_bg_transparent_-high.png?enable-io=true&enable=upscale&width=300"
+               alt="JouwCoachLijn" style="max-height:80px;object-fit:contain;margin-bottom:1rem;" />
+        </a>
+        <p style="font-size:.9rem;color:var(--bruin-lt);line-height:1.7;">
+          Op zoek naar een luisterend oor? Bel <strong>0900-1881</strong> (80 cpm) via <a href="https://www.jouwcoachlijn.com" target="_blank" rel="noopener" style="color:var(--oker);">JouwCoachLijn</a> — Elsemarie luistert zonder oordeel.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ── CONTACT ── -->
 <section class="contact" id="contact">
