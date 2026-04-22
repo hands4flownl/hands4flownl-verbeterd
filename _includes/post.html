@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<section class="page-hero">
+  <div class="breadcrumb">
+    <a href="{{ '/' | absolute_url }}">Home</a>
+    <span><a href="{{ '/blog/' | absolute_url }}">Blog</a></span>
+    <span>{{ page.title }}</span>
+  </div>
+  <span class="section-label">{{ page.date | date: "%d %B %Y" }}</span>
+  <h1 class="section-title">{{ page.title }}</h1>
+</section>
+
+<section style="background:var(--white);">
+  <article style="max-width:750px;margin:0 auto;font-size:1.05rem;line-height:1.85;color:var(--text);">
+
+    {% if page.afbeelding %}
+    <img src="{{ page.afbeelding }}" alt="{{ page.title }}"
+         style="width:100%;border-radius:16px;margin-bottom:2rem;object-fit:cover;max-height:400px;" />
+    {% endif %}
+
+    {{ content }}
+
+    <div style="margin-top:3rem;padding-top:2rem;border-top:1px solid var(--creme-mid);">
+      <a href="{{ '/blog/' | absolute_url }}" class="btn-secondary">← Terug naar blog</a>
+    </div>
+
+  </article>
+</section>
+
+<section class="contact">
+  <h2 class="section-title">Vragen of gewoon kennismaken?</h2>
+  <p class="section-sub">Ik hoor graag van je.</p>
+  <div class="contact-options">
+    <a href="https://api.whatsapp.com/send?phone=31659111456" class="contact-btn contact-btn-whatsapp">💬 WhatsApp mij</a>
+    <a href="{{ '/contact/' | absolute_url }}" class="contact-btn contact-btn-mail">✉ Contact</a>
+  </div>
+</section>

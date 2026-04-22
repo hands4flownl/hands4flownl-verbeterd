@@ -1,0 +1,24 @@
+hero:
+  titel: "Over Elsemarie"
+  subtitel: "Voetreflexmasseur, Reiki Master & Coach in Emmen"
+
+inhoud:
+  foto: "https://primary.jwwb.nl/public/z/f/p/temp-umaagwfutijsnqmyiokx/1000019670-high.jpg?enable-io=true&enable=upscale&width=700"
+  tekst_1: "Ik ben Elsemarie van der Ploeg en ben blij dat je mijn massage, coaching & Reiki praktijk in Emmen gevonden hebt."
+  tekst_2: "Naast mijn werk in de gezondheidszorg werk ik met veel liefde in mijn praktijk."
+  tekst_3: "In mijn praktijk neem ik de tijd voor jou, met aandacht, zachtheid en vertrouwen. Ik kijk verder dan alleen de klacht en stem intuïtief af op wat jij op dat moment nodig hebt. Het kan ook voorkomen dat je een combinatie van twee of zelfs drie behandelingen nodig hebt."
+  tekst_4: "Ik kijk er dan ook naar uit je te ont-moeten."
+  afsluiting: "Warme groet, Elsemarie"
+  kwalificaties:
+    - item: "Lid van Reiki Vereniging Cirkel — reikicirkel.nl"
+    - item: "Gecertificeerd Acces Bars behandelaar"
+    - item: "Opgeleid als coach door José van Eldik in Valthe — josevaneldik.nl"
+    - item: "Werkzaam in de gezondheidszorg naast de praktijk"
+
+aanpak:
+  titel: "Persoonlijke aanpak"
+  tekst: "Ik luister naar jouw verhaal en stem de behandeling af op jouw specifieke wensen. Mijn doel is om jou te helpen ontspannen en je energie weer te laten stromen. Een combinatie van verschillende behandelingen behoort ook tot de mogelijkheden."
+
+contact:
+  titel: "Klaar voor ontspanning?"
+  tekst: "Neem vandaag nog contact op. Ik kijk ernaar uit je te ontmoeten in mijn praktijk in Emmen."

@@ -1,0 +1,60 @@
+hero:
+  titel: "Jouw investering in jezelf"
+  subtitel: "Hier vind je een duidelijk overzicht van de tarieven voor al mijn behandelingen en sessies."
+
+behandelingen:
+  intro: "Voor regelmatige ontspanning heb ik aantrekkelijke strippenkaarten beschikbaar."
+  items:
+    - naam: "Voetreflexmassage"
+      duur: "30 min"
+      prijs: "€ 30,00"
+    - naam: "Voetreflexmassage"
+      duur: "60 min"
+      prijs: "€ 60,00"
+    - naam: "Stoelmassage"
+      duur: "30 min"
+      prijs: "€ 35,00"
+    - naam: "Reiki behandeling"
+      duur: "60 min"
+      prijs: "€ 60,00"
+    - naam: "Reiki afstandsbehandeling"
+      duur: "30 min"
+      prijs: "€ 40,00"
+    - naam: "Acces Bars"
+      duur: "60 min"
+      prijs: "€ 60,00"
+    - naam: "Kinderen"
+      duur: "30 min"
+      prijs: "€ 25,00"
+    - naam: "Kinderen"
+      duur: "60 min"
+      prijs: "€ 45,00"
+
+strippenkaarten:
+  extra: "Bij elke strippenkaart geldt: is ie vol? De volgende behandeling is dan voor de helft van de prijs!"
+  cadeaubon: "Verjaardag? Feestje? Geef een cadeaubon cadeau — leuk om te geven en fijn om te krijgen!"
+
+happy_soul:
+  intro: "Mijn Happy Soul Sessies zijn nieuw in mijn aanbod. Daarom hanteer ik van 26-01-2026 t/m 26-03-2026 een leuke Happy Soul korting van 26%!"
+  items:
+    - naam: "Losse sessie (1,5 uur)"
+      prijs: "€ 95,00"
+    - naam: "Losse sessie (met Happy Soul korting 26%)"
+      prijs: "€ 70,00"
+    - naam: "Traject van 3 Happy Soul Sessies"
+      prijs: "€ 263,00"
+    - naam: "Traject van 3 Happy Soul Sessies (met Happy Soul korting)"
+      prijs: "€ 194,00"
+
+info:
+  titel: "Belangrijke informatie voor jouw bezoek"
+  punten:
+    - item: "Mijn praktijk is gevestigd aan huis en bevindt zich op de eerste etage."
+    - item: "Alle genoemde tarieven zijn BTW vrij."
+    - item: "De behandelingen worden helaas niet vergoed door de zorgverzekering."
+    - item: "Jouw persoonlijke gegevens worden nooit aan derden verstrekt; privacy is gewaarborgd."
+    - item: "Mijn behandelingen ondersteunen alle medische behandelingen, maar ik vervang geen arts of medische professional."
+
+contact:
+  titel: "Vragen of een afspraak maken?"
+  tekst: "Heb je nog vragen? Of wil je een afspraak maken? Neem gerust contact op, ik help je graag verder."

@@ -1,0 +1,26 @@
+hero:
+  label: "Afspraak of vraag?"
+  titel: "Neem contact op"
+  subtitel: "Ik help je graag verder. Stuur een bericht of WhatsApp mij direct."
+
+gegevens:
+  label: "Bereikbaarheid"
+  titel: "hands4flow Emmen"
+  adres: "Emmen (Praktijk aan huis, eerste etage)"
+  telefoon: "06 59 11 14 56"
+  kvk: "97209341"
+  info_box: "Alle tarieven zijn BTW vrij.\nBehandelingen worden niet vergoed door de zorgverzekering.\nJouw gegevens worden nooit aan derden verstrekt."
+  openingstijden: "Maandag t/m vrijdag op afspraak. Soms ook in het weekend mogelijk — neem contact op voor beschikbaarheid."
+  beschikbaarheid_melding: ""
+
+formulier:
+  label: "Afspraak maken"
+  titel: "Stuur een bericht"
+  intro: "Vul het formulier in en ik neem zo snel mogelijk contact met je op."
+
+contact:
+  titel: "Ik kijk ernaar uit je te ont-moeten"
+  tekst: "Tot ziens in mijn praktijk in Emmen."
+  locatie: "Emmen, Nederland"
+  telefoon: "06 59 11 14 56"
+  kvk: "97209341"

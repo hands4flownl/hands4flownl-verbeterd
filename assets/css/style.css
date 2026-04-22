@@ -1,0 +1,1173 @@
+/* ══════════════════════════════════════════════════
+   hands4flow – style.css
+   Palet: warm zandgeel / okergeel / donkerbruin
+   ══════════════════════════════════════════════════ */
+
+:root {
+  /* ── Goud/oker – puur gelig, geen rood ── */
+  --oker:      #9a7d00;   /* olijfgoud, knoppen & actieve links   */
+  --oker-mid:  #b09510;   /* iets lichter goud                    */
+  --oker-lt:   #d4be6a;   /* zacht goudgeel, randen               */
+  --oker-xlt:  #faf5dc;   /* heel licht crème-geel, achtergrond   */
+
+  /* ── Warme achtergronden – puur gelig ── */
+  --creme:     #fdfaf0;   /* hoofd achtergrond                    */
+  --creme-mid: #f5f0d5;   /* sectie achtergronden, cards          */
+
+  /* ── Bruine tekst ── */
+  --bruin:     #3a2c00;   /* donkerste tint, titels               */
+  --bruin-mid: #6b5500;   /* subtitels, labels                    */
+  --bruin-lt:  #6b5510;   /* muted tekst, beschrijvingen — donkerder voor betere leesbaarheid */
+
+  --white:     #ffffff;
+  --text:      #3a2c00;
+}
+
+/* ── RESET & BASE ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text);
+  background: var(--creme);
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+img { display: block; max-width: 100%; }
+a   { color: var(--oker); }
+
+/* ══════════════════════════════════════════════════
+   NAVIGATIE
+   ══════════════════════════════════════════════════ */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+  background: rgba(253,251,240,0.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--oker-lt);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5vw;
+  height: 68px;
+}
+
+/* Logo als afbeelding */
+.nav-logo-img {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+
+/* Fallback tekst logo */
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.55rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  color: var(--bruin);
+  text-decoration: none;
+}
+.nav-logo span { color: var(--oker); }
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+}
+.nav-links a {
+  text-decoration: none;
+  font-size: .87rem;
+  font-weight: 500;
+  color: var(--bruin);
+  letter-spacing: .03em;
+  transition: color .2s;
+}
+.nav-links a:hover,
+.nav-links a.active { color: var(--oker); }
+
+/* Dropdown */
+.has-sub {
+  position: relative;
+  /* padding-bottom overbrugt de ruimte tussen link en submenu */
+  padding-bottom: 8px;
+  margin-bottom: -8px;
+}
+.sub-menu {
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 100%;           /* direct aansluitend, geen gap */
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--white);
+  border: 1px solid var(--oker-lt);
+  border-radius: 12px;
+  list-style: none;
+  padding: .5rem 0;
+  min-width: 200px;
+  box-shadow: 0 8px 32px rgba(61,39,0,.1);
+  z-index: 300;
+  /* kleine vertraging bij weggaan zodat muis het menu kan bereiken */
+  transition: opacity .15s ease, visibility .15s ease;
+}
+.sub-menu li a {
+  display: block;
+  padding: .55rem 1.2rem;
+  font-size: .85rem;
+  white-space: nowrap;
+  color: var(--bruin);
+  text-decoration: none;
+}
+.sub-menu li a:hover { background: var(--oker-xlt); color: var(--oker); }
+.has-sub:hover .sub-menu {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* CTA knop nav */
+.nav-cta {
+  background: var(--oker) !important;
+  color: var(--white) !important;
+  padding: .45rem 1.1rem;
+  border-radius: 100px;
+  transition: background .2s !important;
+}
+.nav-cta:hover { background: var(--bruin) !important; }
+
+/* Hamburger */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+.nav-toggle span {
+  display: block;
+  width: 22px; height: 2px;
+  background: var(--bruin);
+  border-radius: 2px;
+  transition: all .25s;
+}
+
+/* ══════════════════════════════════════════════════
+   GEDEELDE ELEMENTEN
+   ══════════════════════════════════════════════════ */
+main { padding-top: 68px; }
+section { padding: 5rem 5vw; }
+
+.section-label {
+  display: block;
+  font-size: .75rem;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--oker-mid);
+  margin-bottom: .7rem;
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 300;
+  color: var(--bruin);
+  line-height: 1.2;
+  margin-bottom: 1.1rem;
+}
+
+.section-sub {
+  font-size: 1.05rem;
+  font-weight: 300;
+  color: var(--bruin-lt);
+  max-width: 560px;
+  line-height: 1.8;
+}
+
+/* ── KNOPPEN ── */
+.btn-primary {
+  display: inline-block;
+  background: var(--oker);
+  color: var(--white);
+  text-decoration: none;
+  padding: .85rem 2rem;
+  border-radius: 100px;
+  font-size: .9rem;
+  font-weight: 500;
+  transition: background .25s, transform .2s;
+}
+.btn-primary:hover { background: var(--bruin); transform: translateY(-2px); color: var(--white); }
+
+.btn-secondary {
+  display: inline-block;
+  color: var(--bruin);
+  text-decoration: none;
+  padding: .85rem 1.6rem;
+  border-radius: 100px;
+  font-size: .9rem;
+  font-weight: 500;
+  border: 1.5px solid var(--oker-lt);
+  margin-left: .8rem;
+  transition: border-color .25s, color .25s;
+}
+.btn-secondary:hover { border-color: var(--oker); color: var(--oker); }
+
+/* ══════════════════════════════════════════════════
+   HERO
+   ══════════════════════════════════════════════════ */
+.hero {
+  min-height: calc(100vh - 68px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 4rem 5vw;
+  gap: 4rem;
+  background: var(--creme);
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  font-size: .78rem;
+  font-weight: 500;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--bruin-mid);
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  font-weight: 300;
+  line-height: 1.12;
+  color: var(--bruin);
+  margin-bottom: 1.4rem;
+}
+.hero h1 em { font-style: italic; color: var(--oker); }
+
+.hero-desc {
+  font-size: 1.05rem;
+  font-weight: 300;
+  color: var(--bruin-lt);
+  max-width: 480px;
+  margin-bottom: 2.2rem;
+  line-height: 1.8;
+}
+
+.hero-image { position: relative; }
+.hero-image img {
+  width: 100%;
+  height: 580px;
+  object-fit: cover;
+  border-radius: 0 0 0 100px;
+}
+
+.hero-badge {
+  position: absolute;
+  bottom: 2rem; left: -2rem;
+  background: var(--white);
+  border-radius: 16px;
+  padding: 1rem 1.4rem;
+  box-shadow: 0 8px 40px rgba(58,44,0,.10);
+  display: flex;
+  align-items: center;
+  gap: .9rem;
+}
+.hero-badge-icon {
+  width: 44px; height: 44px;
+  background: var(--oker-xlt);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem;
+}
+.hero-badge-text { font-size: .78rem; color: var(--bruin-lt); }
+.hero-badge-text strong { display: block; font-size: .92rem; color: var(--bruin); }
+
+/* ══════════════════════════════════════════════════
+   BEHANDELINGEN / CARDS
+   ══════════════════════════════════════════════════ */
+.treatments { background: var(--white); }
+
+.treatments-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: end;
+  margin-bottom: 3.5rem;
+}
+
+.treatments-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+/* Alle cards: uniforme hoogte en layout */
+.card {
+  background: var(--creme-mid);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform .3s, box-shadow .3s;
+  border: 1px solid transparent;
+}
+.card:hover {
+  transform: translateY(-5px);
+   will-change: transform;
+  box-shadow: 0 16px 50px rgba(0,0,0,.08);
+  border-color: var(--oker-lt);
+}
+
+/* Vaste hoogte voor alle card-afbeeldingen */
+.card-img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.card-body {
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--bruin);
+  margin-bottom: .5rem;
+}
+.card-desc {
+  font-size: .9rem;
+  font-weight: 300;
+  color: var(--bruin-lt);
+  line-height: 1.75;
+  margin-bottom: 1rem;
+  flex: 1;
+}
+.card-link {
+  font-size: .82rem;
+  font-weight: 500;
+  color: var(--oker);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  margin-top: auto;
+}
+.card-link::after { content: '→'; transition: transform .2s; }
+.card-link:hover::after { transform: translateX(4px); }
+
+/* Highlight card: naast elkaar, geen aparte hoogte nodig */
+.card-highlight {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex-direction: unset;
+  min-height: 320px;
+}
+.card-highlight .card-img {
+  height: 100%;
+  min-height: 320px;
+  border-radius: 0;
+}
+.card-highlight .card-body {
+  justify-content: center;
+  padding: 2.5rem;
+}
+.card-highlight .card-title {
+  font-size: 1.9rem;
+}
+
+/* ══════════════════════════════════════════════════
+   OVER MIJ / ABOUT
+   ══════════════════════════════════════════════════ */
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+.about-img-wrap { position: relative; }
+.about-img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border-radius: 80px 20px 20px 20px;
+}
+.about-tag {
+  position: absolute;
+  top: 2rem; right: -1.5rem;
+  background: var(--oker);
+  color: var(--white);
+  padding: .55rem 1.2rem;
+  border-radius: 100px;
+  font-size: .82rem;
+  font-weight: 500;
+}
+.about-values { margin-top: 2rem; display: flex; flex-direction: column; gap: .9rem; }
+.value-item   { display: flex; align-items: flex-start; gap: .9rem; }
+.value-dot {
+  width: 8px; height: 8px;
+  background: var(--oker);
+  border-radius: 50%;
+  margin-top: .65rem;
+  flex-shrink: 0;
+}
+.value-text { font-size: .95rem; font-weight: 300; color: var(--bruin-lt); }
+.value-text a { color: var(--oker); }
+
+/* ══════════════════════════════════════════════════
+   TARIEVEN
+   ══════════════════════════════════════════════════ */
+.pricing { background: var(--oker-xlt); }
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+.price-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 2rem;
+  transition: transform .3s, box-shadow .3s;
+  position: relative;
+}
+.price-card:hover { transform: translateY(-4px); box-shadow: 0 10px 36px rgba(184,134,11,.15); }
+.price-card.featured { background: var(--oker); color: var(--white); }
+.price-card.featured .price-name,
+.price-card.featured .price-desc,
+.price-card.featured .price-duration { color: rgba(255,255,255,.85); }
+
+.featured-tag {
+  position: absolute;
+  top: -12px; left: 50%; transform: translateX(-50%);
+  background: var(--bruin);
+  color: var(--white);
+  font-size: .72rem;
+  font-weight: 500;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: .28rem .9rem;
+  border-radius: 100px;
+}
+.price-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--bruin);
+  margin-bottom: .3rem;
+}
+.price-amount {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.4rem;
+  font-weight: 300;
+  color: var(--oker);
+  line-height: 1;
+  margin: .7rem 0;
+}
+.price-card.featured .price-amount { color: var(--white); }
+.price-duration { font-size: .82rem; color: var(--bruin-lt); margin-bottom: 1rem; }
+.price-desc { font-size: .88rem; font-weight: 300; color: var(--bruin-lt); line-height: 1.7; }
+
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  font-size: .92rem;
+}
+.price-table th {
+  text-align: left;
+  font-weight: 500;
+  font-size: .78rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--oker);
+  padding: .5rem .8rem;
+  border-bottom: 2px solid var(--oker-lt);
+}
+.price-table td {
+  padding: .65rem .8rem;
+  border-bottom: 1px solid var(--oker-xlt);
+  color: var(--bruin-lt);
+  font-weight: 300;
+}
+.price-table tr:last-child td { border-bottom: none; }
+.price-table td:last-child { text-align: right; font-weight: 500; color: var(--bruin); }
+
+/* ── INFO BOX ── */
+.info-box {
+  background: var(--oker-xlt);
+  border-left: 4px solid var(--oker);
+  border-radius: 0 12px 12px 0;
+  padding: 1.2rem 1.5rem;
+  font-size: .9rem;
+  color: var(--bruin-lt);
+  margin-top: 1.5rem;
+  line-height: 1.7;
+}
+.info-box strong { color: var(--bruin); }
+
+/* ══════════════════════════════════════════════════
+   CONTACT SECTIE
+   ══════════════════════════════════════════════════ */
+.contact {
+  background: var(--bruin);
+  color: var(--white);
+  text-align: center;
+}
+.contact .section-label { color: var(--oker-lt); }
+.contact .section-title { color: var(--white); }
+.contact .section-sub   { color: rgba(255,255,255,.72); margin: 0 auto 2.5rem; }
+
+.contact-options {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .85rem 1.8rem;
+  border-radius: 100px;
+  font-size: .9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: transform .2s, opacity .2s;
+}
+.contact-btn:hover { transform: translateY(-2px); opacity: .88; }
+.contact-btn-whatsapp { background: #25D366; color: var(--white); }
+.contact-btn-call     { background: var(--oker); color: var(--white); }
+.contact-btn-mail {
+  background: rgba(255,255,255,.12);
+  color: var(--white);
+  border: 1.5px solid rgba(255,255,255,.35);
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  font-size: .88rem;
+  color: rgba(255,255,255,.55);
+}
+.contact-info span strong { color: rgba(255,255,255,.85); display: block; margin-bottom: .1rem; }
+
+/* ══════════════════════════════════════════════════
+   PAGE HERO (subpagina's)
+   ══════════════════════════════════════════════════ */
+.page-hero {
+  background: var(--oker-xlt);
+  padding: 5rem 5vw 3rem;
+  text-align: center;
+  border-bottom: 1px solid var(--oker-lt);
+}
+.page-hero .section-title { margin: 0 auto .8rem; }
+.page-hero .section-sub   { margin: 0 auto; }
+
+.breadcrumb {
+  font-size: .8rem;
+  color: var(--bruin-lt);
+  margin-bottom: 1rem;
+}
+.breadcrumb a { color: var(--oker); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb span::before { content: ' › '; }
+
+/* ══════════════════════════════════════════════════
+   BEHANDELING DETAIL
+   ══════════════════════════════════════════════════ */
+.treatment-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+.treatment-detail img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.treatment-detail .content h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--bruin);
+  margin: 1.5rem 0 .5rem;
+}
+.treatment-detail .content p {
+  font-size: .95rem;
+  font-weight: 300;
+  color: var(--bruin-lt);
+  line-height: 1.8;
+  margin-bottom: .8rem;
+}
+.treatment-detail .content ul {
+  padding-left: 1.2rem;
+  margin-bottom: 1rem;
+}
+.treatment-detail .content ul li {
+  font-size: .92rem;
+  font-weight: 300;
+  color: var(--bruin-lt);
+  line-height: 1.8;
+  margin-bottom: .3rem;
+}
+
+/* ══════════════════════════════════════════════════
+   FAQ
+   ══════════════════════════════════════════════════ */
+.faq-item { border-bottom: 1px solid var(--oker-lt); padding: 1.1rem 0; }
+.faq-q {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--bruin);
+  gap: 1rem;
+}
+.faq-q::after { content: '+'; font-size: 1.4rem; color: var(--oker); flex-shrink: 0; transition: transform .25s; }
+.faq-item.open .faq-q::after { content: '−'; }
+.faq-a {
+  display: none;
+  font-size: .92rem;
+  font-weight: 300;
+  color: var(--bruin-lt);
+  line-height: 1.75;
+  padding-top: .8rem;
+}
+.faq-item.open .faq-a { display: block; }
+
+/* ══════════════════════════════════════════════════
+   ANIMATIES
+   ══════════════════════════════════════════════════ */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up { opacity: 0; animation: fadeUp .65s ease forwards; }
+.delay-1 { animation-delay: .15s; }
+.delay-2 { animation-delay: .3s; }
+.delay-3 { animation-delay: .45s; }
+
+/* ══════════════════════════════════════════════════
+   FOOTER
+   ══════════════════════════════════════════════════ */
+footer { background: var(--bruin); color: rgba(255,255,255,.6); }
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 2rem;
+  padding: 4rem 5vw 2.5rem;
+}
+.footer-brand p { font-size: .88rem; margin-top: .7rem; font-weight: 300; line-height: 1.6; }
+
+.footer-links,
+.footer-contact { display: flex; flex-direction: column; gap: .5rem; }
+
+.footer-links strong,
+.footer-contact strong {
+  color: rgba(255,255,255,.85);
+  font-size: .8rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-bottom: .3rem;
+}
+.footer-links a,
+.footer-contact a,
+.footer-contact span {
+  font-size: .88rem;
+  font-weight: 300;
+  color: rgba(255,255,255,.55);
+  text-decoration: none;
+  line-height: 1.5;
+}
+.footer-links a:hover,
+.footer-contact a:hover { color: var(--oker-lt); }
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.1);
+  padding: 1.5rem 5vw;
+  text-align: center;
+  font-size: .8rem;
+}
+.footer-bottom a { color: var(--oker-lt); }
+
+/* ══════════════════════════════════════════════════
+   RESPONSIVE — tablet (max 960px)
+   ══════════════════════════════════════════════════ */
+@media (max-width: 960px) {
+  section { padding: 4rem 5vw; }
+
+  /* Hero */
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding: 2.5rem 5vw 3rem;
+    gap: 2rem;
+  }
+  .hero-image img    { border-radius: 20px; height: 300px; }
+  .hero-badge        { left: 0; bottom: 1rem; }
+
+  /* Behandelingen */
+  .treatments-header { grid-template-columns: 1fr; gap: 1rem; margin-bottom: 2rem; }
+  .treatments-grid   { grid-template-columns: 1fr; }
+  .card-highlight    { grid-template-columns: 1fr; min-height: auto; flex-direction: column; }
+  .card-highlight .card-img { height: 220px; min-height: 0; width: 100%; }
+
+  /* About */
+  .about     { grid-template-columns: 1fr; gap: 2rem; }
+  .about-img { aspect-ratio: 4/3; border-radius: 20px; }
+  .about-tag { right: 0; top: 1rem; }
+
+  /* Tarieven */
+  .pricing-grid { grid-template-columns: 1fr; }
+
+  /* Behandeling detail */
+  .treatment-detail { grid-template-columns: 1fr; gap: 2rem; }
+  .treatment-detail img { aspect-ratio: 16/9; }
+
+  /* Aanpak sectie inline grid */
+  [style*="grid-template-columns:1fr 1fr"] {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2rem !important;
+  }
+
+  /* Contact formulier 2-koloms → 1-koloms */
+  [style*="grid-template-columns:1fr 1fr"][style*="gap:1rem"] {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  /* Footer */
+  .footer-inner { grid-template-columns: 1fr 1fr; gap: 1.5rem; padding: 3rem 5vw 2rem; }
+}
+
+/* ══════════════════════════════════════════════════
+   RESPONSIVE — mobiel (max 640px)
+   ══════════════════════════════════════════════════ */
+@media (max-width: 640px) {
+  /* Algemeen */
+  section { padding: 3rem 4vw; }
+  .section-title { font-size: 1.8rem; }
+
+  /* Nav */
+  nav { padding: 0 4vw; }
+  .nav-toggle { display: flex; }
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 68px; left: 0; right: 0;
+    background: var(--white);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 5vw 2rem;
+    border-bottom: 1px solid var(--oker-lt);
+    box-shadow: 0 8px 32px rgba(58,44,0,.1);
+    gap: 0;
+    z-index: 199;
+    overflow-y: auto;
+    max-height: calc(100vh - 68px);
+  }
+  .nav-links.open { display: flex; }
+  .nav-links li   { width: 100%; border-bottom: 1px solid var(--oker-xlt); }
+  .nav-links li:last-child { border-bottom: none; }
+  .nav-links a    { display: block; padding: .75rem 0; font-size: .95rem; }
+  .nav-cta        { margin-top: .5rem; text-align: center; border-radius: 100px; padding: .6rem 1rem !important; }
+  .sub-menu {
+    position: static;
+    transform: none;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    display: none;
+    box-shadow: none;
+    border: none;
+    background: var(--oker-xlt);
+    border-radius: 8px;
+    padding: .3rem 0;
+    margin: .3rem 0 .5rem;
+  }
+  .has-sub.open .sub-menu { display: block; }
+  .sub-menu li { border-bottom: none; }
+  .sub-menu li a { padding: .5rem 1rem; font-size: .88rem; }
+
+  /* Hero */
+  .hero { padding: 2rem 4vw; gap: 1.5rem; }
+  .hero h1 { font-size: 2.2rem; }
+  .hero-desc { font-size: .95rem; margin-bottom: 1.5rem; }
+  .hero-image img { height: 240px; }
+  .hero-badge {
+    position: static;
+    margin-top: 1rem;
+    display: inline-flex;
+  }
+
+  /* Knoppen — altijd onder elkaar */
+  .btn-primary,
+  .btn-secondary {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+    margin-top: .6rem;
+    box-sizing: border-box;
+  }
+  .btn-primary + .btn-secondary,
+  .btn-secondary + .btn-primary { margin-top: .6rem; }
+
+  /* Page hero */
+  .page-hero { padding: 3rem 4vw 2rem; }
+  .page-hero .section-title { font-size: 1.8rem; }
+
+  /* Cards */
+  .card-img { height: 200px; }
+  .card-highlight .card-img { height: 200px; }
+  .card-highlight .card-body { padding: 1.4rem; }
+
+  /* About */
+  .about-img { aspect-ratio: 1/1; }
+  .about-tag { font-size: .75rem; padding: .4rem .9rem; top: .8rem; right: .5rem; }
+
+  /* Tarieven */
+  .price-table { font-size: .82rem; }
+  .price-table th,
+  .price-table td { padding: .5rem .5rem; }
+
+  /* Info box */
+  .info-box { font-size: .85rem; padding: 1rem 1.2rem; }
+
+  /* Contact opties */
+  .contact-options { flex-direction: column; align-items: center; gap: .7rem; }
+  .contact-btn     { width: 100%; max-width: 300px; justify-content: center; }
+  .contact-info    { flex-direction: column; gap: 1rem; align-items: center; text-align: center; }
+
+  /* Contact formulier */
+  [style*="grid-template-columns:1fr 1fr"][style*="gap:1rem"] {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: .8rem !important;
+  }
+
+  /* Behandeling detail */
+  .treatment-detail img { aspect-ratio: 16/9; }
+  .treatment-detail .content h2 { font-size: 1.3rem; margin-top: 1.2rem; }
+  .treatment-detail .content p,
+  .treatment-detail .content li { font-size: .88rem; }
+
+  /* Footer */
+  .footer-inner   { grid-template-columns: 1fr; gap: 1.5rem; padding: 2.5rem 4vw 1.5rem; }
+  .footer-bottom  { font-size: .75rem; padding: 1.2rem 4vw; }
+
+  /* Inline grid secties (aanpak, contact-detail) */
+  [style*="grid-template-columns:1fr 1fr"] {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+  }
+  [style*="grid-template-columns:2fr 1fr 1fr 1fr"] {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+}
+@media (max-width: 900px) {
+  .card-highlight {
+    grid-column: auto;
+    display: block;
+  }
+
+  .card-highlight .card-img {
+    height: 220px;
+  }
+}
+/* =========================================================
+   STABILITEITSLAYER — grid + highlight + animatie (plak onderaan)
+   ========================================================= */
+
+/* 1) Behandelingen-grid: 2 kolommen waar het kan, netjes op tablets/mobiel */
+.treatments-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+/* Zorg dat cards nooit door een parent “afgekapt” worden */
+.treatments,
+.treatments-grid{
+  overflow: visible;
+  height: auto;
+  max-height: none;
+}
+
+/* 2) Highlight card: over beide kolommen op desktop */
+.card-highlight{
+  grid-column: 1 / -1;              /* span over beide kolommen */
+  display: grid;
+  grid-template-columns: 1fr 1fr;    /* beeld links, tekst rechts */
+  align-items: stretch;
+}
+
+/* Als je ooit vaste hoogtes had: neutraliseren */
+.card,
+.card-highlight{
+  height: auto;
+  max-height: none;
+}
+
+/* 3) Tussenbreedtes (laptop half scherm / tablet): 1 kolom en highlight “normaal” */
+@media (max-width: 980px){
+  .treatments-grid{
+    grid-template-columns: 1fr;      /* voorkomt geperste kaarten */
+  }
+  .card-highlight{
+    grid-column: auto;
+    grid-template-columns: 1fr;      /* highlight wordt gewone kaart */
+    display: block;
+  }
+  .card-highlight .card-img{
+    height: 220px;
+  }
+}
+
+/* 4) Mobiel: extra zekerheid */
+@media (max-width: 640px){
+  .treatments-grid{
+    grid-template-columns: 1fr;
+  }
+  .card-img{ height: 200px; }
+  .card-highlight .card-img{ height: 200px; }
+}
+
+
+/* =========================================================
+   FAIL-SAFE ANIMATIES — nooit meer “verdwenen” cards
+   ========================================================= */
+
+/* Standaard: alles zichtbaar (altijd veilig) */
+.fade-up{
+  opacity: 1;
+  transform: none;
+  animation: none;
+}
+
+/* Alleen animeren als de gebruiker geen “reduce motion” heeft */
+@media (prefers-reduced-motion: no-preference){
+  .fade-up{
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp .65s ease forwards;
+  }
+}
+
+/* Op mobiel: animatie uit (stabieler + rustiger) */
+@media (max-width: 640px){
+  .fade-up{
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+}
+
+
+/* =========================================================
+   Rustiger hover (optioneel, maar vaak mooier)
+   ========================================================= */
+
+/* Als je de “sprong” te aanwezig vindt, zet translate uit */
+@media (hover: hover){
+  .card:hover{
+    transform: none; /* of laat weg als je het effect wil houden */
+    box-shadow: 0 16px 50px rgba(0,0,0,.08);
+  }
+}
+
+/* ══════════════════════════════════════════════════
+   NAV PHONE + WHATSAPP HEADER
+   ══════════════════════════════════════════════════ */
+.nav-phone {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  font-size: .82rem;
+  margin-right: .5rem;
+}
+.nav-phone a {
+  color: var(--bruin-mid);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color .2s;
+}
+.nav-phone a:hover { color: var(--oker); }
+
+.nav-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  background: #25D366;
+  color: #fff !important;
+  padding: .3rem .75rem;
+  border-radius: 50px;
+  font-size: .78rem;
+  font-weight: 600;
+  transition: background .2s !important;
+}
+.nav-whatsapp:hover { background: #1ebe5a !important; color: #fff !important; }
+
+@media (max-width: 900px) {
+  .nav-phone { display: none; }
+}
+
+/* ══════════════════════════════════════════════════
+   REVIEWS SECTIE — meerdere citaten
+   ══════════════════════════════════════════════════ */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 2.5rem auto 0;
+}
+.review-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 1.6rem;
+  box-shadow: 0 2px 16px rgba(154,125,0,.07);
+  border: 1px solid var(--oker-lt);
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+}
+.review-stars { color: var(--oker); font-size: 1rem; letter-spacing: .1rem; }
+.review-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--bruin);
+  line-height: 1.65;
+  flex: 1;
+}
+.review-author {
+  font-size: .8rem;
+  color: var(--bruin-mid);
+  font-weight: 500;
+}
+
+/* ══════════════════════════════════════════════════
+   KLACHTGERICHT BLOK
+   ══════════════════════════════════════════════════ */
+.klachten-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.klacht-item {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  border-left: 3px solid var(--oker);
+  font-size: .92rem;
+  color: var(--bruin);
+  font-weight: 400;
+}
+
+/* ══════════════════════════════════════════════════
+   TARIEVEN KAARTJES (Praktijk Vlinders stijl)
+   ══════════════════════════════════════════════════ */
+.tarief-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.tarief-card {
+  background: var(--white);
+  border: 1px solid var(--oker-lt);
+  border-radius: 16px;
+  padding: 1.8rem 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+  transition: box-shadow .25s, transform .25s;
+}
+.tarief-card:hover {
+  box-shadow: 0 8px 32px rgba(154,125,0,.13);
+  transform: translateY(-3px);
+}
+.tarief-naam {
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--bruin-mid);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.tarief-prijs {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: var(--bruin);
+  line-height: 1;
+}
+.tarief-duur {
+  font-size: .82rem;
+  color: var(--bruin-lt);
+}
+.tarief-card .btn-primary {
+  margin-top: .8rem;
+  font-size: .82rem;
+  padding: .5rem 1.2rem;
+}
+
+/* ══════════════════════════════════════════════════
+   DETAILS / MEER LEZEN uitklapper
+   ══════════════════════════════════════════════════ */
+details summary {
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  cursor: pointer;
+  user-select: none;
+}
+details summary::-webkit-details-marker { display: none; }
+details summary::before {
+  content: '▸';
+  font-size: .75rem;
+  transition: transform .2s;
+  color: var(--oker);
+}
+details[open] summary::before {
+  transform: rotate(90deg);
+}
+details[open] > div {
+  animation: fadeIn .25s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

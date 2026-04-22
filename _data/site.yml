@@ -1,0 +1,18 @@
+# ── SITEWIDE INSTELLINGEN ──────────────────────────────────────
+# Dit bestand beheert instellingen die op de hele site zichtbaar zijn.
+
+# ── AANKONDIGINGSBANNER ────────────────────────────────────────
+# Zet 'actief' op true om de banner bovenaan elke pagina te tonen.
+# Zet op false om de banner te verbergen.
+banner:
+  actief: false
+  tekst: "🌿 Tijdelijk: gratis kennismakingsgesprek bij je eerste afspraak — bel of WhatsApp mij!"
+  link_tekst: "Maak een afspraak"
+  link_url: "/contact/"
+
+# ── SEO – ZOEKMACHINES ────────────────────────────────────────
+# Deze teksten verschijnen in Google zoekresultaten.
+seo:
+  site_titel: "hands4flow – Massage, Coaching & Reiki in Emmen"
+  site_beschrijving: "Massage, Coaching en Reiki in Emmen. Voetreflexmassage, Reiki, Acces Bars, Stoelmassage en Happy Soul Sessies bij hands4flow van Elsemarie van der Ploeg."
+  trefwoorden: "massage emmen, reiki emmen, voetreflexmassage, acces bars, coaching emmen, hands4flow"

@@ -1,0 +1,21 @@
+hero:
+  label: "Behandeling"
+  titel: "Stoelmassage"
+  subtitel: "Even snel ontspannen? Direct verlichting voor rug, nek en schouders."
+  afbeelding: "https://primary.jwwb.nl/public/z/f/p/temp-umaagwfutijsnqmyiokx/file_00000000476061f78aa2a0ee9f74f998-high.png?enable-io=true&enable=upscale&crop=1.4286%3A1&width=800"
+
+inhoud:
+  intro_1: "Even snel ontspannen? Een stoelmassage geeft direct verlichting bij spanning in rug, nek en schouders."
+  intro_2: "Het is een korte ontspannende massage van rug, nek, schouders, hoofd, armen en handen. Deze massage wordt over de kleding heen gegeven waardoor hij erg laagdrempelig is."
+  intro_3: "Tevens zit je in een speciaal ontworpen ergonomische stoel. Ook hier wordt gebruik gemaakt van drukpuntmassage. De doorstroming wordt weer beter en blokkades worden opgeheven."
+  klachten_titel: "Heb jij last van…"
+  klachten:
+    - item: "Nekklachten?"
+    - item: "Vaak hoofdpijn?"
+    - item: "Vastzittende rug of schouders?"
+  klachten_slot: "Dan kan stoelmassage helpend zijn."
+  tarief: "30 minuten — € 35,00\nStrippenkaart 5x: € 135,00 · 10x: € 270,00"
+
+contact:
+  titel: "Direct ontspannen?"
+  tekst: "Plan vandaag nog een stoelmassage bij hands4flow in Emmen."

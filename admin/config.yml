@@ -1,0 +1,483 @@
+backend:
+  name: github
+  repo: itffilosofieinfo/hands4flow.nl
+  branch: main
+  client_id: Ov23li8jIVeGFYSSK1lp
+  base_url: https://sveltia-cms-auth.itf-filosofie-info.workers.dev
+
+media_folder: "assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+locale: nl
+
+collections:
+
+  # ─── SITE-INSTELLINGEN ──────────────────────────────────────
+  - name: "site_instellingen"
+    label: "⚙️ Site-instellingen"
+    files:
+      - label: "Site-instellingen"
+        name: "site"
+        file: "_data/site.yml"
+        fields:
+          - label: "Aankondigingsbanner"
+            name: "banner"
+            widget: "object"
+            hint: "Een gekleurde balk bovenaan elke pagina. Handig voor aanbiedingen of tijdelijke mededelingen."
+            fields:
+              - { label: "Banner tonen", name: "actief", widget: "boolean", default: false, hint: "Zet aan om de banner zichtbaar te maken op de site." }
+              - { label: "Bannertekst", name: "tekst", widget: "string", hint: "De tekst die in de banner verschijnt. Bijv: 🌿 Tijdelijk: gratis kennismakingsgesprek bij je eerste afspraak!" }
+              - { label: "Knoptekst (optioneel)", name: "link_tekst", widget: "string", required: false, hint: "Tekst van de link in de banner. Laat leeg als je geen link wilt." }
+              - { label: "Knop-URL (optioneel)", name: "link_url", widget: "string", required: false, hint: "Bijv. /contact/ of /tarieven/" }
+          - label: "SEO – Zoekmachines"
+            name: "seo"
+            widget: "object"
+            hint: "Deze teksten verschijnen in Google zoekresultaten. Vul ze zorgvuldig in — ze helpen nieuwe bezoekers jou te vinden."
+            fields:
+              - { label: "Sitetitel", name: "site_titel", widget: "string", hint: "Korte omschrijving van je praktijk voor Google. Max. 60 tekens." }
+              - { label: "Sitebeschrijving", name: "site_beschrijving", widget: "text", hint: "Wat ziet iemand in Google onder jouw sitenaam? Max. 160 tekens. Schrijf alsof je jezelf voorstelt aan een nieuwe klant." }
+              - { label: "Trefwoorden", name: "trefwoorden", widget: "string", hint: "Kommagescheiden. Bijv: massage emmen, reiki emmen, voetreflexmassage" }
+
+  # ─── HOMEPAGE ───────────────────────────────────────────────
+  - name: "homepage"
+    label: "🏠 Homepage"
+    files:
+      - label: "Homepage"
+        name: "homepage"
+        file: "_data/homepage.yml"
+        fields:
+          - label: "Hero sectie"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Kleine tekst boven de titel", name: "eyebrow", widget: "string" }
+              - { label: "Hoofdtitel", name: "titel", widget: "string" }
+              - { label: "Cursief woord in de titel", name: "titel_cursief", widget: "string", hint: "Dit woord wordt cursief weergegeven." }
+              - { label: "Beschrijving", name: "beschrijving", widget: "text" }
+              - { label: "Hero afbeelding", name: "afbeelding", widget: "image", required: false, hint: "Grote achtergrond- of sfeerfoto voor de homepage." }
+          - label: "Behandelingen sectie"
+            name: "behandelingen"
+            widget: "object"
+            fields:
+              - { label: "Sectie-label", name: "label", widget: "string" }
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Introductietekst", name: "intro", widget: "text" }
+          - label: "Behandelingen (kaarten)"
+            name: "behandeling_kaarten"
+            widget: "list"
+            fields:
+              - { label: "Naam", name: "naam", widget: "string" }
+              - { label: "Beschrijving", name: "beschrijving", widget: "text" }
+          - label: "Over mij sectie"
+            name: "over_mij"
+            widget: "object"
+            fields:
+              - { label: "Naam", name: "naam", widget: "string" }
+              - { label: "Introductietekst", name: "tekst", widget: "text" }
+              - label: "Kwalificaties"
+                name: "kwalificaties"
+                widget: "list"
+                field: { label: "Kwalificatie", name: "tekst", widget: "string" }
+          - label: "Persoonlijke aanpak"
+            name: "aanpak"
+            widget: "object"
+            fields:
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Tekst", name: "tekst", widget: "text" }
+          - label: "Contact sectie"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Tekst", name: "tekst", widget: "text" }
+              - { label: "Locatie", name: "locatie", widget: "string" }
+              - { label: "Telefoonnummer", name: "telefoon", widget: "string" }
+              - { label: "KVK-nummer", name: "kvk", widget: "string" }
+
+  # ─── BEHANDELINGEN ──────────────────────────────────────────
+  - name: "behandelingen"
+    label: "💆 Behandelingen"
+    files:
+
+      - label: "Behandelingen overzicht"
+        name: "behandelingen_index"
+        file: "_data/behandelingen.yml"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Sectie-label", name: "label", widget: "string" }
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Subtitel", name: "subtitel", widget: "text" }
+          - label: "Contact sectie"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Tekst", name: "tekst", widget: "text" }
+
+      - label: "Voetreflexmassage"
+        name: "voetreflexmassage"
+        file: "_data/voetreflexmassage.yml"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Subtitel", name: "subtitel", widget: "text" }
+              - { label: "Afbeelding", name: "afbeelding", widget: "image", required: false, hint: "Sfeerfoto voor voetreflexmassage." }
+          - label: "Inhoud"
+            name: "inhoud"
+            widget: "object"
+            fields:
+              - { label: "Alinea 1", name: "intro_1", widget: "text" }
+              - { label: "Alinea 2", name: "intro_2", widget: "text" }
+              - { label: "Alinea 3", name: "intro_3", widget: "text" }
+              - { label: "Voordelen titel", name: "voordelen_titel", widget: "string" }
+              - label: "Voordelen"
+                name: "voordelen"
+                widget: "list"
+                field: { label: "Voordeel", name: "item", widget: "string" }
+              - { label: "Tarief", name: "tarief", widget: "text", hint: "Prijs en duur van de behandeling" }
+          - label: "Contact sectie"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Tekst", name: "tekst", widget: "text" }
+
+      - label: "Reiki"
+        name: "reiki"
+        file: "_data/reiki.yml"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Subtitel", name: "subtitel", widget: "text" }
+              - { label: "Afbeelding", name: "afbeelding", widget: "image", required: false, hint: "Sfeerfoto voor Reiki." }
+          - label: "Inhoud"
+            name: "inhoud"
+            widget: "object"
+            fields:
+              - { label: "Introductie alinea 1", name: "intro_1", widget: "text" }
+              - { label: "Introductie alinea 2", name: "intro_2", widget: "text" }
+              - { label: "Balans & herstel titel", name: "balans_titel", widget: "string" }
+              - { label: "Balans & herstel tekst 1", name: "balans_tekst_1", widget: "text" }
+              - { label: "Balans & herstel tekst 2", name: "balans_tekst_2", widget: "text" }
+              - { label: "Voordelen titel", name: "voordelen_titel", widget: "string" }
+              - label: "Voordelen"
+                name: "voordelen"
+                widget: "list"
+                field: { label: "Voordeel", name: "item", widget: "string" }
+              - { label: "Reiki op afstand titel", name: "afstand_titel", widget: "string" }
+              - { label: "Reiki op afstand tekst 1", name: "afstand_tekst_1", widget: "text" }
+              - { label: "Reiki op afstand tekst 2", name: "afstand_tekst_2", widget: "text" }
+              - { label: "Tips titel", name: "tips_titel", widget: "string" }
+              - { label: "Tips tekst", name: "tips_tekst", widget: "text" }
+              - { label: "Tarief", name: "tarief", widget: "text" }
+          - label: "Contact sectie"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Tekst", name: "tekst", widget: "text" }
+
+      - label: "Acces Bars"
+        name: "acces_bars"
+        file: "_data/acces-bars.yml"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Subtitel", name: "subtitel", widget: "text" }
+              - { label: "Afbeelding", name: "afbeelding", widget: "image", required: false, hint: "Sfeerfoto voor Acces Bars." }
+          - label: "Inhoud"
+            name: "inhoud"
+            widget: "object"
+            fields:
+              - { label: "Alinea 1", name: "intro_1", widget: "text" }
+              - { label: "Alinea 2", name: "intro_2", widget: "text" }
+              - { label: "Alinea 3", name: "intro_3", widget: "text" }
+              - { label: "Voordelen titel", name: "voordelen_titel", widget: "string" }
+              - label: "Voordelen"
+                name: "voordelen"
+                widget: "list"
+                field: { label: "Voordeel", name: "item", widget: "string" }
+              - { label: "Tarief", name: "tarief", widget: "text" }
+          - label: "Contact sectie"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Tekst", name: "tekst", widget: "text" }
+
+      - label: "Stoelmassage"
+        name: "stoelmassage"
+        file: "_data/stoelmassage.yml"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Subtitel", name: "subtitel", widget: "text" }
+              - { label: "Afbeelding", name: "afbeelding", widget: "image", required: false, hint: "Sfeerfoto voor stoelmassage." }
+          - label: "Inhoud"
+            name: "inhoud"
+            widget: "object"
+            fields:
+              - { label: "Alinea 1", name: "intro_1", widget: "text" }
+              - { label: "Alinea 2", name: "intro_2", widget: "text" }
+              - { label: "Alinea 3", name: "intro_3", widget: "text" }
+              - { label: "Klachten titel", name: "klachten_titel", widget: "string" }
+              - label: "Klachten"
+                name: "klachten"
+                widget: "list"
+                field: { label: "Klacht", name: "item", widget: "string" }
+              - { label: "Slottekst", name: "klachten_slot", widget: "string" }
+              - { label: "Tarief", name: "tarief", widget: "text" }
+          - label: "Contact sectie"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Tekst", name: "tekst", widget: "text" }
+
+  # ─── COACHING ───────────────────────────────────────────────
+  - name: "coaching"
+    label: "🌟 Coaching"
+    files:
+
+      - label: "Coaching overzicht"
+        name: "coaching_index"
+        file: "_data/coaching.yml"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Subtitel", name: "subtitel", widget: "text" }
+          - label: "Inhoud"
+            name: "inhoud"
+            widget: "object"
+            fields:
+              - { label: "Alinea 1", name: "tekst_1", widget: "text" }
+              - { label: "Alinea 2", name: "tekst_2", widget: "text" }
+              - { label: "Alinea 3", name: "tekst_3", widget: "text" }
+          - label: "Contact sectie"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Locatie", name: "locatie", widget: "string" }
+              - { label: "Telefoonnummer", name: "telefoon", widget: "string" }
+
+      - label: "Happy Soul Sessies"
+        name: "happy_soul"
+        file: "_data/happy-soul-sessies.yml"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Subtitel", name: "subtitel", widget: "text" }
+          - label: "Inhoud"
+            name: "inhoud"
+            widget: "object"
+            fields:
+              - { label: "Introductie", name: "intro", widget: "text" }
+              - { label: "Wat kun je verwachten — titel", name: "verwachten_titel", widget: "string" }
+              - label: "Wat kun je verwachten — punten"
+                name: "verwachten"
+                widget: "list"
+                field: { label: "Punt", name: "item", widget: "string" }
+              - { label: "Resultaat tekst", name: "resultaat", widget: "text" }
+              - { label: "Korting titel", name: "korting_titel", widget: "string" }
+              - { label: "Korting tekst", name: "korting_tekst", widget: "text" }
+              - { label: "Reguliere tarieven", name: "tarief", widget: "text" }
+          - label: "Contact sectie"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Tekst", name: "tekst", widget: "text" }
+
+  # ─── OVER MIJ ───────────────────────────────────────────────
+  - name: "over_mij"
+    label: "👤 Over mij"
+    files:
+      - label: "Over mij"
+        name: "over_mij"
+        file: "_data/over-mij.yml"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Subtitel", name: "subtitel", widget: "text" }
+          - label: "Inhoud"
+            name: "inhoud"
+            widget: "object"
+            fields:
+              - { label: "Profielfoto", name: "foto", widget: "image", required: false, hint: "Jouw profielfoto, zichtbaar op de Over mij pagina." }
+              - { label: "Alinea 1", name: "tekst_1", widget: "text" }
+              - { label: "Alinea 2", name: "tekst_2", widget: "text" }
+              - { label: "Alinea 3", name: "tekst_3", widget: "text" }
+              - { label: "Alinea 4", name: "tekst_4", widget: "text" }
+              - { label: "Afsluiting", name: "afsluiting", widget: "string" }
+              - label: "Kwalificaties"
+                name: "kwalificaties"
+                widget: "list"
+                field: { label: "Kwalificatie", name: "item", widget: "string" }
+          - label: "Persoonlijke aanpak"
+            name: "aanpak"
+            widget: "object"
+            fields:
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Tekst", name: "tekst", widget: "text" }
+          - label: "Contact sectie"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Tekst", name: "tekst", widget: "text" }
+
+  # ─── TARIEVEN ───────────────────────────────────────────────
+  - name: "tarieven"
+    label: "💶 Tarieven"
+    files:
+      - label: "Tarieven"
+        name: "tarieven"
+        file: "_data/tarieven.yml"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Subtitel", name: "subtitel", widget: "text" }
+          - label: "Behandelingen tarieven"
+            name: "behandelingen"
+            widget: "object"
+            fields:
+              - { label: "Intro tekst", name: "intro", widget: "text" }
+              - label: "Behandelingen"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Naam", name: "naam", widget: "string" }
+                  - { label: "Duur", name: "duur", widget: "string" }
+                  - { label: "Prijs", name: "prijs", widget: "string" }
+          - label: "Strippenkaarten"
+            name: "strippenkaarten"
+            widget: "object"
+            fields:
+              - { label: "Extra info", name: "extra", widget: "text" }
+              - { label: "🎁 Cadeaubon tekst", name: "cadeaubon", widget: "text", hint: "Tekst over cadeaubonnen op de tariefpagina. Bijv: 'Cadeaubonnen zijn verkrijgbaar voor alle behandelingen — het ideale cadeau voor iemand die ontspanning verdient!'" }
+          - label: "Happy Soul Sessies"
+            name: "happy_soul"
+            widget: "object"
+            fields:
+              - { label: "Intro tekst", name: "intro", widget: "text" }
+              - label: "Tarieven"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Naam", name: "naam", widget: "string" }
+                  - { label: "Prijs", name: "prijs", widget: "string" }
+          - label: "Belangrijke informatie"
+            name: "info"
+            widget: "object"
+            fields:
+              - { label: "Titel", name: "titel", widget: "string" }
+              - label: "Punten"
+                name: "punten"
+                widget: "list"
+                field: { label: "Punt", name: "item", widget: "string" }
+          - label: "Contact sectie"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Tekst", name: "tekst", widget: "text" }
+
+  # ─── CONTACT ────────────────────────────────────────────────
+  - name: "contact"
+    label: "✉️ Contact"
+    files:
+      - label: "Contact"
+        name: "contact"
+        file: "_data/contact.yml"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Subtitel", name: "subtitel", widget: "text" }
+          - label: "Contactgegevens"
+            name: "gegevens"
+            widget: "object"
+            fields:
+              - { label: "Adres", name: "adres", widget: "string" }
+              - { label: "Telefoonnummer", name: "telefoon", widget: "string" }
+              - { label: "KVK-nummer", name: "kvk", widget: "string" }
+              - { label: "Info box tekst", name: "info_box", widget: "text" }
+              - { label: "Openingstijden / beschikbaarheid", name: "openingstijden", widget: "text", required: false, hint: "Bijv: Maandag t/m vrijdag op afspraak. Wordt zichtbaar op de contactpagina." }
+              - { label: "Tijdelijke beschikbaarheidsmelding", name: "beschikbaarheid_melding", widget: "string", required: false, hint: "Optioneel: een korte melding zoals 'Op vakantie van 14 t/m 21 juli'. Laat leeg als er geen melding nodig is." }
+          - label: "Contact sectie onderaan"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Locatie", name: "locatie", widget: "string" }
+              - { label: "Telefoonnummer", name: "telefoon", widget: "string" }
+
+  # ─── FAQ ────────────────────────────────────────────────────
+  - name: "faq"
+    label: "❓ Veelgestelde vragen"
+    files:
+      - label: "Veelgestelde vragen"
+        name: "veelgestelde_vragen"
+        file: "_data/veelgestelde-vragen.yml"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Subtitel", name: "subtitel", widget: "text" }
+          - label: "Vragen & antwoorden"
+            name: "vragen"
+            widget: "list"
+            fields:
+              - { label: "Vraag", name: "vraag", widget: "string" }
+              - { label: "Antwoord", name: "antwoord", widget: "text" }
+          - label: "Contact sectie"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Tekst", name: "tekst", widget: "text" }
+
+  # ─── BLOG ───────────────────────────────────────────────────
+  - name: "blog"
+    label: "📝 Blog"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Datum", name: "date", widget: "datetime" }
+      - { label: "Uitgelichte afbeelding", name: "afbeelding", widget: "image", required: false, hint: "Wordt getoond als header of thumbnail bij het artikel." }
+      - { label: "Beschrijving (SEO)", name: "description", widget: "string", required: false }
+      - { label: "Inhoud", name: "body", widget: "markdown" }

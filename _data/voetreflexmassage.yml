@@ -1,0 +1,22 @@
+hero:
+  label: "Behandeling"
+  titel: "Voetreflexmassage"
+  subtitel: "Ervaar de rust en balans met een voetreflexmassage."
+  afbeelding: "https://primary.jwwb.nl/pexels/52/5240642.jpeg?enable-io=true&enable=upscale&crop=1.4286%3A1&width=800"
+
+inhoud:
+  intro_1: "Bij deze massage wordt er druk uitgeoefend op de voet. Het hele lichaam kun je terug vinden op de voeten."
+  intro_2: "Elk orgaan en gedeelte van je lichaam heeft een reflectie punt op de voet. Door hier druk op uit te oefenen worden de desbetreffende delen en organen behandeld."
+  intro_3: "Een voetreflex behandeling stimuleert het zelfherstellend vermogen van het lichaam. Verbetert de afvoer van afvalstoffen, geeft ontspanning, bevordert de doorbloeding en vermindert stress."
+  voordelen_titel: "Wat doet voetreflexmassage?"
+  voordelen:
+    - item: "Stimuleert het zelfherstellend vermogen van het lichaam"
+    - item: "Verbetert de afvoer van afvalstoffen"
+    - item: "Geeft diepe ontspanning"
+    - item: "Bevordert de doorbloeding"
+    - item: "Vermindert stress"
+  tarief: "30 minuten — € 30,00\n60 minuten — € 60,00\nStrippenkaart 5x (60 min): € 270,00 · 10x (60 min): € 540,00"
+
+contact:
+  titel: "Klaar voor ontspanning?"
+  tekst: "Neem contact op en plan je voetreflexmassage bij hands4flow in Emmen."

@@ -1,0 +1,22 @@
+hero:
+  label: "Nieuw aanbod"
+  titel: "Happy Soul Sessies"
+  subtitel: "Speciaal voor mensen die verlangen naar rust, inzicht en verbinding met zichzelf."
+
+inhoud:
+  intro: "De Happy Soul Sessies zijn nieuw in mijn aanbod. In een sessie van anderhalf uur werken we aan jouw persoonlijke thema's via gesprekken, lichaamswerk en waar nodig een tafelopsteling."
+  verwachten_titel: "Wat kun je verwachten?"
+  verwachten:
+    - item: "Gesprekken over wat jou bezig houdt"
+    - item: "Ademsessies om te ontspannen en te voelen"
+    - item: "Body drum release om spanning los te laten"
+    - item: "Tafelopsteling voor dieper inzicht in patronen"
+  resultaat: "Het resultaat: meer rust in je hoofd, vertrouwen in jezelf en helderheid over wat jij nodig hebt."
+  korting_titel: "Happy Soul korting t/m 26 maart 2026"
+  korting_tekst: "Losse sessie (1,5 uur): van € 95,00 voor € 70,00 (26% korting)\nTraject 3 sessies: van € 263,00 voor € 194,00"
+  tarief_titel: "Reguliere tarieven"
+  tarief: "Losse sessie (1,5 uur): € 95,00\nTraject van 3 sessies: € 263,00"
+
+contact:
+  titel: "Start jouw Happy Soul traject"
+  tekst: "Neem contact op en ontdek wat een sessie voor jou kan betekenen."

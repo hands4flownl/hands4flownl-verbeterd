@@ -1,0 +1,71 @@
+hero:
+  eyebrow: "Massage · Coaching · Reiki – Emmen"
+  titel: "Voel je weer licht en ontspannen."
+  titel_cursief: "licht"
+  afbeelding: "https://primary.jwwb.nl/pexels/52/5240642.jpeg?enable-io=true&enable=upscale&crop=1.4286%3A1&width=900"
+  beschrijving: >
+    Welkom bij hands4flow. Ben je altijd maar bezig en heb je weinig tijd voor jezelf?
+    Ik help je de spanning los te laten en op te laden, zodat je hoofd weer leeg wordt
+    en je energie herstelt.
+
+behandelingen:
+  label: "Wat ik aanbied"
+  titel: "Behandelingen voor jouw welzijn"
+  intro: >
+    Hands4flow biedt een unieke combinatie van behandelingen, speciaal voor mensen die
+    altijd maar doorgaan en weinig tijd nemen voor ontspanning. Last van lichamelijke
+    klachten door te veel werken? Ik help je graag!
+
+behandeling_kaarten:
+  - naam: "Voetreflexmassage"
+    beschrijving: >
+      Bij een voetreflexmassage wordt druk uitgeoefend op de voet, waarop het hele lichaam
+      terug te vinden is. Stimuleert het zelfherstellend vermogen, verbetert de doorbloeding
+      en vermindert stress.
+  - naam: "Reiki"
+    beschrijving: >
+      Als Reiki Master ben ik een doorgeefluik van de universele levensenergie. Via
+      handoplegging heft de behandeling blokkades op en versterkt het zelfherstellend vermogen.
+  - naam: "Acces Bars"
+    beschrijving: >
+      32 energetische punten op je hoofd worden zacht aangeraakt. Je laat beperkende patronen
+      los, slaapt beter en ervaart meer rust en helderheid – alsof je lichaam een reset krijgt.
+  - naam: "Stoelmassage"
+    beschrijving: >
+      Even snel ontspannen? Een stoelmassage geeft directe verlichting bij spanning in rug,
+      nek en schouders. Over de kleding, laagdrempelig en direct effectief.
+  - naam: "Coaching"
+    beschrijving: >
+      Via gesprekken, ademsessies en body drum release worden blokkades opgeruimd. Kom dichter
+      bij jezelf en leer weer vertrouwen en rust te ervaren.
+
+over_mij:
+  label: "Over mij"
+  naam: "Elsemarie"
+  tekst: >
+    Ik ben Elsemarie van der Ploeg en ben blij dat je mijn praktijk voor massage, coaching
+    en Reiki in Emmen gevonden hebt. Naast mijn werk in de gezondheidszorg werk ik met veel
+    liefde in mijn praktijk. Ik kijk er dan ook naar uit je te ont-moeten.
+  kwalificaties:
+    - "Lid van Reiki Vereniging Cirkel – reikicirkel.nl"
+    - "Gecertificeerd Acces Bars behandelaar"
+    - "Opgeleid als coach door José van Eldik in Valthe – josevaneldik.nl"
+    - "Combinaties van behandelingen mogelijk op maat"
+
+aanpak:
+  label: "Werkwijze"
+  titel: "Mijn persoonlijke aanpak"
+  tekst: >
+    Ik luister naar jouw verhaal en stem de behandeling af op jouw specifieke wensen.
+    Mijn doel is om jou te helpen ontspannen en je energie weer te laten stromen.
+    Een combinatie van verschillende behandelingen behoort ook tot de mogelijkheden.
+
+contact:
+  titel: "Klaar voor ontspanning?"
+  tekst: >
+    Neem vandaag nog contact op voor een behandeling bij hands4flow in Emmen.
+    Ervaar zelf de weldaad van hands4flow. Gun jezelf de rust en ontspanning die je verdient.
+    Ik kijk ernaar uit je te ontmoeten!
+  locatie: "Emmen, Nederland"
+  telefoon: "06 59 11 14 56"
+  kvk: "97209341"
