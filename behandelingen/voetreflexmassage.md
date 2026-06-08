@@ -35,8 +35,8 @@ permalink: /behandelingen/voetreflexmassage/
 
       <div class="info-box">
         <strong>Duur &amp; tarief:</strong><br/>
-        30 minuten — € 30,00<br/>
-        60 minuten — € 60,00
+        60 minuten — € 60,00<br/>
+        Verzorgingshuis aan huis (30 min) — € 35,00 <em>(Reiki &amp; stoelmassage ook mogelijk, buiten Emmen in overleg)</em>
       </div>
 
       <details style="margin:1rem 0;cursor:pointer;">
