@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Tarieven"
-description: "Tarieven massage, coaching & Reiki praktijk hands4flow Emmen – voetreflexmassage, reiki, stoelmassage, Access Bars"
+description: "Tarieven massage, coaching & Reiki praktijk hands4flow Emmen – voetreflexmassage, reiki, stoelmassage, Acces Bars"
 permalink: /tarieven/
 ---
 
@@ -22,13 +22,6 @@ permalink: /tarieven/
     <h2 class="section-title">Individuele behandelingen</h2>
 
     <div class="tarief-grid">
-
-      <div class="tarief-card">
-        <span class="tarief-naam">Voetreflexmassage</span>
-        <div class="tarief-prijs">€ 30</div>
-        <span class="tarief-duur">30 minuten</span>
-        <a href="{{ '/contact/' | absolute_url }}" class="btn-primary">Afspraak maken</a>
-      </div>
 
       <div class="tarief-card">
         <span class="tarief-naam">Voetreflexmassage</span>
@@ -67,15 +60,16 @@ permalink: /tarieven/
 
       <div class="tarief-card">
         <span class="tarief-naam">Kinderen</span>
-        <div class="tarief-prijs">€ 25</div>
-        <span class="tarief-duur">30 minuten</span>
+        <div class="tarief-prijs">€ 40</div>
+        <span class="tarief-duur">behandeling</span>
         <a href="{{ '/contact/' | absolute_url }}" class="btn-primary">Afspraak maken</a>
       </div>
 
       <div class="tarief-card">
-        <span class="tarief-naam">Kinderen</span>
-        <div class="tarief-prijs">€ 45</div>
-        <span class="tarief-duur">60 minuten</span>
+        <span class="tarief-naam">Voetreflexmassage verzorgingshuis</span>
+        <div class="tarief-prijs">€ 35</div>
+        <span class="tarief-duur">30 min · aan huis</span>
+        <p style="font-size:.8rem;color:var(--bruin-lt);margin:.3rem 0 .8rem;">Reiki &amp; stoelmassage ook mogelijk. Buiten Emmen in overleg.</p>
         <a href="{{ '/contact/' | absolute_url }}" class="btn-primary">Afspraak maken</a>
       </div>
 
@@ -92,19 +86,17 @@ permalink: /tarieven/
   <div style="max-width:1100px;margin:0 auto;">
     <span class="section-label">Voordeel</span>
     <h2 class="section-title">Strippenkaarten</h2>
-    <p class="section-sub">Voor regelmatige ontspanning heb ik aantrekkelijke strippenkaarten beschikbaar. Is je kaart vol? Dan is de volgende behandeling voor de helft van de prijs! 🎉</p>
+    <p class="section-sub">Voor regelmatige ontspanning heb ik aantrekkelijke strippenkaarten beschikbaar. Bij 5 strippen krijg je een halve behandeling gratis, bij 10 strippen 1,5 behandeling gratis! 🎉</p>
 
     <table class="price-table" style="margin-top:2rem;">
       <thead>
-        <tr><th>Strippenkaart</th><th>30 min</th><th>60 min</th></tr>
+        <tr><th>Strippenkaart</th><th>Prijs</th></tr>
       </thead>
       <tbody>
-        <tr><td>Reiki of voetreflex — 5 strippen</td><td>€ 135,00</td><td>€ 270,00</td></tr>
-        <tr><td>Reiki of voetreflex — 10 strippen</td><td>€ 270,00</td><td>€ 540,00</td></tr>
-        <tr><td>Stoelmassage — 5 strippen</td><td>€ 135,00</td><td>—</td></tr>
-        <tr><td>Stoelmassage — 10 strippen</td><td>€ 270,00</td><td>—</td></tr>
-        <tr><td>Acces Bars — 5 strippen</td><td>—</td><td>€ 270,00</td></tr>
-        <tr><td>Acces Bars — 10 strippen</td><td>—</td><td>€ 540,00</td></tr>
+        <tr><td>5 strippenkaart</td><td>€ 270,00</td></tr>
+        <tr><td>10 strippenkaart</td><td>€ 510,00</td></tr>
+        <tr><td>5 strippenkaart verzorgingshuis</td><td>€ 157,00</td></tr>
+        <tr><td>10 strippenkaart verzorgingshuis</td><td>€ 297,00</td></tr>
       </tbody>
     </table>
   </div>
@@ -115,7 +107,7 @@ permalink: /tarieven/
   <div style="max-width:1100px;margin:0 auto;">
     <span class="section-label">Coaching</span>
     <h2 class="section-title">Happy Soul Sessies</h2>
-    <p class="section-sub">Nieuw in mijn aanbod — persoonlijke begeleiding die gericht is op het herontdekken van je innerlijke kracht en vreugde.</p>
+    <p class="section-sub">Persoonlijke begeleiding die gericht is op het herontdekken van je innerlijke kracht en vreugde.</p>
 
     <div class="tarief-grid" style="margin-top:2rem;">
 
@@ -127,23 +119,9 @@ permalink: /tarieven/
       </div>
 
       <div class="tarief-card" style="border-color:var(--oker);background:var(--white);">
-        <span class="tarief-naam">Losse sessie — 26% korting</span>
-        <div class="tarief-prijs">€ 70</div>
-        <span class="tarief-duur">1,5 uur · tijdelijk</span>
-        <a href="{{ '/contact/' | absolute_url }}" class="btn-primary">Afspraak maken</a>
-      </div>
-
-      <div class="tarief-card" style="border-color:var(--oker);background:var(--white);">
         <span class="tarief-naam">Traject 3 sessies</span>
         <div class="tarief-prijs">€ 263</div>
         <span class="tarief-duur">3 × 1,5 uur</span>
-        <a href="{{ '/contact/' | absolute_url }}" class="btn-primary">Afspraak maken</a>
-      </div>
-
-      <div class="tarief-card" style="border-color:var(--oker);background:var(--white);">
-        <span class="tarief-naam">Traject 3 sessies — 26% korting</span>
-        <div class="tarief-prijs">€ 194</div>
-        <span class="tarief-duur">3 × 1,5 uur · tijdelijk</span>
         <a href="{{ '/contact/' | absolute_url }}" class="btn-primary">Afspraak maken</a>
       </div>
 
