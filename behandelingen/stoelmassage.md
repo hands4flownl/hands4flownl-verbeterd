@@ -18,18 +18,13 @@ permalink: /behandelingen/stoelmassage/
 
 <section style="background:var(--white);">
   <div class="treatment-detail">
-    {% assign data = site.data.stoelmassage %}
-    {% if data.hero.afbeelding %}
-    <img src="{{ data.hero.afbeelding }}" alt="Stoelmassage bij hands4flow Emmen" />
-    {% else %}
     <img src="https://primary.jwwb.nl/public/z/f/p/temp-umaagwfutijsnqmyiokx/file_00000000476061f78aa2a0ee9f74f998-high.png?enable-io=true&enable=upscale&crop=1.4286%3A1&width=800" alt="Stoelmassage bij hands4flow Emmen" />
-    {% endif %}
     <div class="content">
 
       <p>Een stoelmassage is een korte, ontspannende massage van rug, nek, schouders, hoofd, armen en handen — gegeven over de kleding heen in een speciaal ergonomische stoel. Direct effectief, geen voorbereiding nodig.</p>
 
       <div class="info-box" style="background:var(--oker-xlt);border-left:3px solid var(--oker);padding:1.2rem 1.4rem;border-radius:8px;margin-bottom:1rem;">
-        <strong>Fijn als je last hebt van:</strong><br/>
+        <strong>Fijn bij:</strong><br/>
         Nekklachten · Hoofdpijn · Vastzittende schouders · Rugspanning
       </div>
 
@@ -38,8 +33,10 @@ permalink: /behandelingen/stoelmassage/
         30 minuten — € 35,00
       </div>
 
-      <a href="{{ '/contact/' | absolute_url }}" class="btn-primary">Afspraak maken</a>
-      <a href="{{ '/tarieven/' | absolute_url }}" class="btn-secondary" style="margin-left:.5rem;">Alle tarieven</a>
+      <div style="display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.5rem;">
+        <a href="{{ '/contact/' | absolute_url }}" class="btn-primary">Afspraak maken</a>
+        <a href="{{ '/tarieven/' | absolute_url }}" class="btn-secondary">Alle tarieven</a>
+      </div>
     </div>
   </div>
 </section>
