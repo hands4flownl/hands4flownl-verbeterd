@@ -5,10 +5,7 @@ description: "Massage, Coaching & Reiki in Emmen – hands4flow"
 permalink: /
 ---
 
-<!-- ── KORTINGSBAND ── -->
-<div style="background:var(--oker);color:var(--bruin);text-align:center;padding:.6rem 1rem;font-size:.88rem;font-weight:600;">
-  🎉 26% korting op Happy Soul Sessies (coaching) t/m 26 april — <a href="{{ '/tarieven/' | absolute_url }}" style="color:var(--bruin);text-decoration:underline;">bekijk tarieven</a>
-</div>
+
 
 <!-- ── HERO ── -->
 <section class="hero">
@@ -190,7 +187,7 @@ permalink: /
   <div style="max-width:600px;margin:0 auto;">
     <span class="section-label">Tarieven</span>
     <h2 class="section-title">Wat kost een behandeling?</h2>
-    <p class="section-sub">Behandelingen vanaf € 30,00. Combinaties en strippenkaarten zijn mogelijk.</p>
+    <p class="section-sub">Behandelingen vanaf € 35,00. Combinaties en strippenkaarten zijn mogelijk.</p>
     <a href="{{ '/tarieven/' | absolute_url }}" class="btn-primary">Bekijk alle tarieven</a>
   </div>
 </section>
