@@ -11,7 +11,7 @@ permalink: /coaching/happy-soul-sessies/
     <span><a href="{{ '/coaching/' | relative_url }}">Coaching</a></span>
     <span>Happy Soul Sessies</span>
   </div>
-  <span class="section-label">Nieuw aanbod</span>
+  <span class="section-label">Coaching</span>
   <h1 class="section-title">Happy Soul Sessies</h1>
   <p class="section-sub">Speciaal voor mensen die verlangen naar rust, inzicht en verbinding met zichzelf.</p>
 </section>
@@ -31,10 +31,7 @@ permalink: /coaching/happy-soul-sessies/
       </ul>
       <p>Het resultaat: meer rust in je hoofd, vertrouwen in jezelf en helderheid over wat jij nodig hebt.</p>
       <div class="info-box">
-        <strong>🌟 Happy Soul korting t/m 26 maart 2026:</strong><br/>
-        Losse sessie (1,5 uur): <del>€ 95,00</del> → <strong>€ 70,00</strong> (26% korting)<br/>
-        Traject 3 sessies: <del>€ 263,00</del> → <strong>€ 194,00</strong><br/><br/>
-        <strong>Reguliere tarieven:</strong><br/>
+        <strong>Tarieven Happy Soul Sessies:</strong><br/>
         Losse sessie (1,5 uur): € 95,00<br/>
         Traject van 3 sessies: € 263,00
       </div>
@@ -53,4 +50,3 @@ permalink: /coaching/happy-soul-sessies/
     <a href="{{ '/contact/' | relative_url }}" class="contact-btn contact-btn-mail">✉ Contact</a>
   </div>
 </section>
-
