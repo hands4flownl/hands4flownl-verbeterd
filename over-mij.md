@@ -27,16 +27,13 @@ permalink: /over-mij/
       <span class="section-label">Mijn verhaal</span>
       <h2 class="section-title">Hallo, ik ben<br>Elsemarie</h2>
       <p class="section-sub">
-        Ik ben Elsemarie van der Ploeg en ben blij dat je mijn massage, coaching &amp; Reiki praktijk in Emmen gevonden hebt.
-      </p>
-      <p class="section-sub" style="margin-top:1rem;">
+        Ik ben Elsemarie van der Ploeg en ben blij dat je mijn praktijk voor massage, coaching &amp; Reiki in Emmen gevonden hebt.
         Naast mijn werk in de gezondheidszorg werk ik met veel liefde in mijn praktijk.
       </p>
       <p class="section-sub" style="margin-top:1rem;">
-        In mijn praktijk neem ik de tijd voor jou, met aandacht, zachtheid en vertrouwen. Ik kijk verder dan alleen de klacht en stem intuïtief af op wat jij op dat moment nodig hebt. Het kan ook voorkomen dat je een combinatie van twee of zelfs drie behandelingen nodig hebt.
-      </p>
-      <p class="section-sub" style="margin-top:1rem;">
-        Ik kijk er dan ook naar uit je te ont-moeten.
+        Ik neem de tijd voor jou — met aandacht, zachtheid en vertrouwen. Ik kijk verder dan alleen de klacht
+        en stem intuïtief af op wat jij op dat moment nodig hebt. Soms is een combinatie van behandelingen
+        precies wat er nodig is.
       </p>
       <p class="section-sub" style="margin-top:1rem;font-style:italic;">
         Warme groet, Elsemarie
@@ -63,29 +60,43 @@ permalink: /over-mij/
       </div>
       <br/>
       <a href="{{ '/contact/' | absolute_url }}" class="btn-primary">Plan jouw afspraak</a>
-      <a href="{{ '/behandelingen/' | absolute_url }}" class="btn-secondary">Bekijk behandelingen</a>
+      <a href="{{ '/behandelingen/' | absolute_url }}" class="btn-secondary" style="margin-left:.5rem;">Bekijk behandelingen</a>
     </div>
   </div>
 </section>
 
-<section style="background:var(--oker-xlt);">
-  <div style="max-width:780px;margin:0 auto;text-align:center;">
-    <span class="section-label">Mijn werkwijze</span>
-    <h2 class="section-title">Persoonlijke aanpak</h2>
-    <p class="section-sub" style="margin:0 auto;">
-      Ik luister naar jouw verhaal en stem de behandeling af op jouw specifieke wensen.
-      Mijn doel is om jou te helpen ontspannen en je energie weer te laten stromen.
-      Een combinatie van verschillende behandelingen behoort ook tot de mogelijkheden.
-    </p>
-    <br/><br/>
-    <a href="{{ '/tarieven/' | absolute_url }}" class="btn-primary">Bekijk de tarieven</a>
+<!-- ── ANDERE INITIATIEVEN (hier thuishorend, niet op homepage) ── -->
+<section style="background:var(--creme);">
+  <div style="max-width:900px;margin:0 auto;">
+    <span class="section-label">Meer van Elsemarie</span>
+    <h2 class="section-title" style="font-size:1.6rem;">Andere initiatieven</h2>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:2rem;align-items:start;">
+      <div>
+        <a href="https://www.nederland-bewust.nl" target="_blank" rel="noopener">
+          <img src="https://primary.jwwb.nl/public/z/f/p/temp-umaagwfutijsnqmyiokx/nederland-bewust-logo-transparant-high.png?enable-io=true&enable=upscale&width=300"
+               alt="Nederland Bewust" style="max-height:80px;object-fit:contain;margin-bottom:1rem;" />
+        </a>
+        <p style="font-size:.9rem;color:var(--bruin-lt);line-height:1.7;">
+          Elsemarie is mede-initiatiefneemster van <a href="https://www.nederland-bewust.nl" target="_blank" rel="noopener" style="color:var(--oker);">nederland-bewust.nl</a> — de startpagina voor alternatieve zorg, holistische therapie en natuurlijke gezondheid.
+        </p>
+      </div>
+      <div>
+        <a href="https://www.jouwcoachlijn.com" target="_blank" rel="noopener">
+          <img src="https://primary.jwwb.nl/public/z/f/p/temp-umaagwfutijsnqmyiokx/logo_jcl_edited_v2_bg_transparent_-high.png?enable-io=true&enable=upscale&width=300"
+               alt="JouwCoachLijn" style="max-height:80px;object-fit:contain;margin-bottom:1rem;" />
+        </a>
+        <p style="font-size:.9rem;color:var(--bruin-lt);line-height:1.7;">
+          Op zoek naar een luisterend oor? Bel <strong>0900-1881</strong> (80 cpm) via <a href="https://www.jouwcoachlijn.com" target="_blank" rel="noopener" style="color:var(--oker);">JouwCoachLijn</a> — Elsemarie luistert zonder oordeel.
+        </p>
+      </div>
+    </div>
   </div>
 </section>
 
 <section class="contact">
-  <span class="section-label">Contact</span>
   <h2 class="section-title">Klaar voor ontspanning?</h2>
-  <p class="section-sub">Neem vandaag nog contact op. Ik kijk ernaar uit je te ontmoeten in mijn praktijk in Emmen.</p>
+  <p class="section-sub">Ik kijk ernaar uit je te ontmoeten in mijn praktijk in Emmen.</p>
   <div class="contact-options">
     <a href="https://api.whatsapp.com/send?phone=31659111456" class="contact-btn contact-btn-whatsapp">💬 WhatsApp mij</a>
     <a href="{{ '/contact/' | absolute_url }}" class="contact-btn contact-btn-mail">✉ Neem contact op</a>
